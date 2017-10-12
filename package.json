@@ -1,10 +1,14 @@
 {
-  "name": "Journal",
+  "name": "journal",
   "version": "0.0.1",
   "description": "A minimal content focused theme for Ghost",
   "repository": {
     "type": "git",
     "url": "git@github.com:namdau/journal.git"
+  },
+  "author": {
+    "name": "Laurent Meyer",
+    "email": "laurent@jobninja.com"
   },
   "scripts": {
     "postinstall": "gulp build"
@@ -15,7 +19,6 @@
     "theme",
     "green"
   ],
-  "author": "Nam Dau",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.12.5",

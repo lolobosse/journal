@@ -10,7 +10,6 @@
 
         {{! Page Meta }}
         <title>{{meta_title}}</title>
-        <meta name="description" content="{{meta_description}}">
         <meta name="HandheldFriendly" content="True" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta property="og:url" content="{{@blog.url}}">
@@ -23,6 +22,7 @@
         <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}" />
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:300,700' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         {{! Ghost outputs important style and meta data with this tag }}
         {{ghost_head}}
@@ -35,8 +35,9 @@
             <header id="header" class="header">
                 <div class="container">
                     <div class="page-title">
-                        <h1 class="name"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
-                        <p class="desc">{{@blog.description}}</p>
+                        {{!-- <h1 class="name"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+                        <p class="desc">{{@blog.description}}</p> --}}
+                        <a href="https://jobninja.com"><img src="{{asset "images/jobninja-logo.png"}}"></img><a href="{{@blog.url}}">
                     </div>
                     {{navigation}}
                     <a href="#" class="menu" id="toggle">
@@ -47,7 +48,7 @@
                 </div>
             </header>
 
-            <a href="{{@blog.url}}" class="home-link"><i class="fa fa-lg fa-home" aria-hidden="true"></i></a>
+            {{!-- <a href= class="home-link"><i class="fa fa-lg fa-home" aria-hidden="true"></i></a> --}}
 
             <div class="container">
                 <main class="content" role="main">
@@ -60,15 +61,15 @@
             <footer class="container">
                 <div class="links">
                     <div class="follow">
-                        <h5 class="footer-heading">Follow Me</h5>
+                        <h5 class="footer-heading">Sozial Netzwerke</h5>
                         {{> "social"}}
                     </div>
                     <div class="follow">
-                        <h5 class="footer-heading">Explore</h5>
+                        <h5 class="footer-heading">JobNinja</h5>
                         {{> "external"}}
                     </div>
                     <div class="recent">
-                        <h5 class="footer-heading">Recent Posts</h5>
+                        <h5 class="footer-heading">Neueste Artikel</h5>
                         {{#get "posts" limit="5" as |recents|}}
                         <ul>
                             {{#foreach recents}}

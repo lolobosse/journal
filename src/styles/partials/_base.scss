@@ -12,6 +12,10 @@ body {
     font-style: normal;
     letter-spacing: 0.01rem;
     color: $main_text;
+    margin-top:8px;
+    margin-bottom:0;
+    margin-left:0;
+    margin-right:0;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -27,6 +31,10 @@ a {
     }
 }
 
+article:hover{
+    cursor: pointer;
+}
+
 .container {
     max-width: 780px;
     width: 90%;
@@ -40,12 +48,17 @@ a {
     border-bottom: 1px solid $border_color;
     padding: 15px 0;
     margin-bottom: 40px;
+    margin-left: 8px;
+    margin-right: 8px;
     .container {
         display: flex;
         flex-direction: row;
     }
     .page-title {
-        flex: 2;
+        flex: 1;
+        img{
+            width: 60px;
+        }
         .name {
             font-size: 1.5em;
             text-transform: capitalize;
@@ -203,9 +216,11 @@ a {
 
 .footer {
     margin-top: 40px;
-    color: $footer_color;
-    background-color: $footer_bg;
+    color: #777;
     padding: 40px 0 0;
+    border-top: 1px solid $border_color;   
+    margin-left: 8px;
+    margin-right: 8px; 
     .footer-heading {
         font-weight: 700;
         letter-spacing: 0.03rem;
@@ -213,9 +228,9 @@ a {
         font-size: .9em;
     }
     a {
-        color: $footer_link;
+        color: $link;
         &:hover {
-            color: $footer_color;
+            color: $header_link;
         }
     }
 
@@ -261,7 +276,7 @@ a {
     font-weight: 300;
     text-align: left;
     width: 100%;
-    color: $footer_link;
+    color: $link;
     a {
         font-weight: 400;
     }
@@ -286,6 +301,8 @@ a {
     .header {
         text-align: center;
         min-height: 40px;
+        margin-left: 0px;
+        margin-right: 0px;
         .title {
             margin: 8px 0;
             width: 100%;
@@ -305,6 +322,7 @@ a {
             transition: .5s ease-in-out;
             cursor: pointer;
             border-bottom: 0;
+            z-index: 4;
             span {
                 display: block;
                 position: absolute;
@@ -366,6 +384,8 @@ a {
     }
     .footer {
         padding: 30px 0 0;
+        margin-left: 0px;
+        margin-right: 0px;
         .links {
             flex-direction: column;
             .footer-heading {

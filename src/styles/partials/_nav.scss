@@ -19,7 +19,16 @@ nav {
                     content: '';
                 }
                 a {
-                    font-weight: 300;
+                    font-size: 16px;
+                    font-weight: 400;
+                    &:hover{
+                        color: $link;
+                        border-bottom: 2px solid $header_link;
+                        -moz-transition: none;
+                        -webkit-transition: none;
+                        -o-transition: color 0 ease-in;
+                        transition: none;
+                    }
                 }
             }
         }
@@ -36,10 +45,6 @@ nav {
 
 @media only screen and (max-width: 768px) {
     body.nav-opened {
-    	.wrapper {
-    	    transform: translate3D(-120px, 0, 0);
-    	    transition: transform 0.3s ease;
-    	}
     	header .main-navigation {
     		margin: 0;
     	    display: block;
@@ -47,29 +52,33 @@ nav {
     	    top: 0;
     	    right: 0;
     	    bottom: 0;
-    	    z-index: 5;
-    	    width: 120px;
-    	    right: -120px;
+    	    z-index: 1;
+    	    width: 100%;
+    	    left: 0px;
     	    transform: translate3D(0, 0, 0);
     	    opacity: 1;
     	    color: #fff;
-    	    background: #0A5A38;
+    	    background: $menu_bg;
     	    margin-bottom: 0;
     	    text-align: left;
     	    overflow-y: auto;
     	    ul {
-    	    	padding: 20% 10% 5%;
-    	    	list-style: none;
-    	    	float: left;
+                padding: 20% 0% 0%;
+                list-style: none;
     	    	li {
-                    padding: 3px 2px;
-    	    		display: block;
+                    padding: 8px 15px 8px;
+                    display: block;
+                    background: white;
+                    margin-bottom: 5px;
+
                     &:after {
                         content: "";
                         padding: 0;
                     }
                     a {
-                        color: $footer_link;
+                        color: $menu_text;
+                        font-size: 16px;
+                        font-weight: 400;
                     }
     	    	}
     	    }

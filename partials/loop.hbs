@@ -1,26 +1,19 @@
-{{! This is the post loop - each post will be output using this markup }}
-{{#foreach posts}}
-
-<article class="{{post_class}}">
+{{! This is the post loop - each post will be output using this markup }} {{#foreach posts}}
+<article class="{{post_class}}" data-target="{{url}}">
     <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
     <section class="post-excerpt">
-        <p>{{excerpt words="60"}}<a class="read-more" href="{{url}}"> &raquo;</a></p>
+        <a href="{{url}}">
+            <p>{{excerpt words="60"}}<a class="read-more" href="{{url}}"> &raquo;</a></p>
+        </a>
     </section>
     <section class="post-meta">
-        <span><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></
-        span>
         {{#if tags}}
         <span class="dot"></span>
         <span class="post-tags-loop">
             {{#foreach tags}}
               <a href="{{url}}" title="{{name}}" class="tag-{{id}}">#{{name}}</a>
             {{/foreach}}
-        </span>
-        {{/if}}
+        </span> {{/if}}
     </section>
 </article>
-
-{{/foreach}}
-
-{{! Previous/next page links - displayed on every page }}
-{{pagination}}
+{{/foreach}} {{! Previous/next page links - displayed on every page }} {{pagination}}
