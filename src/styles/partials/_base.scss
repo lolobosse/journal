@@ -57,7 +57,7 @@ article:hover{
     .page-title {
         flex: 1;
         img{
-            width: 60px;
+            width: 90px;
         }
         .name {
             font-size: 1.5em;
@@ -314,8 +314,8 @@ article:hover{
             display: none;
         }
         .menu {
-            width: 24px;
-            height: 12px;
+            width: 30px;
+            height: 18px;
             margin: 0 auto;
             position: relative;
             transform: rotate(0deg);
@@ -338,15 +338,15 @@ article:hover{
                     top: 0;
                 }
                 &:nth-child(2) {
-                    top: 6px;
+                    top: 9px;
                 }
                 &:nth-child(3) {
-                    top: 12px;
+                    top: 18px;
                 }
             }
             &.open {
                 span:nth-child(1) {
-                    top: 6px;
+                    top: 9px;
                     width: 0%;
                     left: 50%;
                 }
@@ -355,7 +355,7 @@ article:hover{
                 }
                 span:nth-child(3) {
                     transform: rotate(-45deg);
-                    top: 6px;
+                    top: 9px;
                 }
             }
         }
