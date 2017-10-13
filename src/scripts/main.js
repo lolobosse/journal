@@ -9,7 +9,7 @@
 		body.classList.toggle('nav-opened');
 	}, false);
 
-	$('article').on('click', function(e){
+	$('article.loop').on('click', function(e){
 		window.location.href=$(this).data('target');
 	})
 

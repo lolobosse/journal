@@ -31,7 +31,7 @@ a {
     }
 }
 
-article:hover{
+article.loop:hover{
     cursor: pointer;
 }
 
@@ -119,17 +119,19 @@ article:hover{
         .post-footer {
             font-size: .9em;
             border-top: 1px solid $border_color;
-            .share {
-                padding: 20px 0 30px;
-                float: right;
-                a {
-                    margin-left: 5px;
-                }
-                span {
-                    font-size: .9em;
-                    font-weight: 400;
-                    margin-right: 15px;
-                }
+        }
+        .share {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: $link;
+            a {
+                margin-left: 5px;
+                color: $link;
+            }
+            span {
+                font-size: .9em;
+                font-weight: 400;
+                margin-right: 5px;
             }
         }
         .post-header {
