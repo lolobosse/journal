@@ -2,42 +2,42 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-    <head>
-        {{! Document Settings }}
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-        {{! Page Meta }}
-        <title>{{meta_title}}</title>
-        <meta name="HandheldFriendly" content="True" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta property="og:url" content="{{@blog.url}}">
-        <meta property="og:type" content="article">
-        <meta property="og:title" content="{{meta_title}}">
-        <meta property="og:description" content="{{meta_description}}">
-        <meta property="og:site_name" content="{{@blog.title}}">
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta property="og:url" content="{{@blog.url}}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{meta_title}}">
+    <meta property="og:description" content="{{meta_description}}">
+    <meta property="og:site_name" content="{{@blog.title}}"> {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset " styles/main.css "}}" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:300,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        {{! Styles'n'Scripts }}
-        <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}" />
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Merriweather:300,700' rel='stylesheet' type='text/css'>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {{! Ghost outputs important style and meta data with this tag }} {{ghost_head}}
+</head>
 
-        {{! Ghost outputs important style and meta data with this tag }}
-        {{ghost_head}}
-    </head>
-    <body class="{{body_class}}">
-        <!--[if lt IE 8]>
+<body class="{{body_class}}">
+    <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="wrapper">
-            <header id="header" class="header">
-                <div class="container">
-                    <div class="page-title">
-                        {{!-- <h1 class="name"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
-                        <p class="desc">{{@blog.description}}</p> --}}
-                        <a href="https://jobninja.com"><img src="{{asset "images/jobninja-logo.png"}}"></img><a href="{{@blog.url}}">
+    <div class="wrapper">
+        <header id="header" class="header">
+            <div class="container">
+                <div class="page-title">
+                    {{!--
+                    <h1 class="name"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+                    <p class="desc">{{@blog.description}}</p> --}}
+                    <a href="https://jobninja.com"><img src="{{asset "images/jobninja-logo.png"}}"></img><a href="{{@blog.url}}">
                     </div>
                     {{navigation}}
                     <a href="#" class="menu" id="toggle">
@@ -46,15 +46,15 @@
                         <span></span>
                     </a>
                 </div>
-            </header>
+        </header>
 
-            {{!-- <a href= class="home-link"><i class="fa fa-lg fa-home" aria-hidden="true"></i></a> --}}
+        {{!-- <a href=c lass="home-link"><i class="fa fa-lg fa-home" aria-hidden="true"></i></a> --}}
 
-            <div class="container">
-                <main class="content" role="main">
-                    {{{body}}}
-                </main>
-            </div>
+        <div class="container">
+            <main class="content" role="main">
+                {{{body}}}
+            </main>
+        </div>
         </div>
 
         <div class="footer">
@@ -83,24 +83,27 @@
 
             <div id="copyright">
                 <div class="container">
-                    <div class="copyright-text">&copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>. Proudly published with <a href="//ghost.org">Ghost</a> and <a href="//github.com/namdau/journal">Journal</a>.</div>
+                    <div class="copyright-text">&copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>. Proudly published with
+                        <a
+                            href="//ghost.org">Ghost</a> and <a href="//github.com/namdau/journal">Journal</a>.</div>
                 </div>
             </div>
         </div>
 
 
-        {{! Ghost outputs important scripts and data with this tag }}
-        {{ghost_foot}}
-        <script src="{{asset "scripts/main.js"}}"></script>
+        {{! Ghost outputs important scripts and data with this tag }} {{ghost_foot}}
+        <script src="{{asset " scripts/main.js "}}"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65554208-6"></script>
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-65554208-6');
+
         </script>
-    </body>
+</body>
+
 </html>
