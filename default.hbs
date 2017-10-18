@@ -17,6 +17,17 @@
         <meta property="og:description" content="{{meta_description}}">
         <meta property="og:site_name" content="{{@blog.title}}">
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65554208-6"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-65554208-6');
+
+        </script>
+        
         {{! Styles'n'Scripts }}
         <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}" />
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
@@ -91,15 +102,5 @@
         {{! Ghost outputs important scripts and data with this tag }}
         {{ghost_foot}}
         <script src="{{asset "scripts/main.js"}}"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-65554208-6','auto');ga('send','pageview');
-        </script>
     </body>
 </html>
